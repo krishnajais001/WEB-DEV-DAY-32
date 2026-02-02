@@ -19,27 +19,39 @@
 //  let a ={}; // empty object created
 
  // factory function -> step1:create object step2: return object
- function createRectangle(len,bread){
-    return rectangle ={
-        // property
-        length:len, 
-        breadth:bread,
+//  function createRectangle(len,bread){
+//     return rectangle ={
+//         // property
+//         length:len, 
+//         breadth:bread,
 
-       // behaviour - mehtod
-        draw:function(){  
-            console.log(`Drawing Rectangle `); 
-        } 
-    };
+//        // behaviour - mehtod
+//         draw:function(){  
+//             console.log(`Drawing Rectangle `); 
+//         } 
+//     };
    
- }
+//  }
 //  console.log(createRectangle());
 
 
-let rectangle1 = createRectangle(5,4);
-let rectangle2 = createRectangle(2,3);
-let rectangle3 = createRectangle(7,9);
+// let rectangle1 = createRectangle(5,4);
+// let rectangle2 = createRectangle(2,3);
+// let rectangle3 = createRectangle(7,9);
 
 // console.log(rectangle1);
 
+// Constructor Function-> Pascal Notation -> first letter of every word is capital => NumberOfStudents
+// constructor function -> prop/methods -> initialise
 
- 
+function Rectangle(len,bred){
+    this.length = len;
+    this.breadth = bred;
+    this.draw = function(){
+        console.log(`Drawing Rectangle`);    
+    }
+}
+
+// object creation using constructor function
+let rectangleObject = new Rectangle();
+console.log(rectangleObject);
